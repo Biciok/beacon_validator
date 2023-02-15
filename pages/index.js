@@ -158,10 +158,20 @@ export default function Home() {
               <button type="submit" onClick={fetchData} className="btn btn-primary mx-2">
                 Fetch validator data
               </button>
-              <button type="submit" onClick={calculateData} className="btn btn-secondary mx-2">
+              <button
+                type="submit"
+                onClick={calculateData}
+                className="btn btn-secondary mx-2"
+                disabled={validators.length > 0 ? false : true}
+              >
                 Calculate validator data
               </button>
-              <button type="submit" onClick={calculateLeaderboard} className="btn btn-accent mx-2">
+              <button
+                type="submit"
+                onClick={calculateLeaderboard}
+                className="btn btn-accent mx-2"
+                disabled={validators.length > 0 ? false : true}
+              >
                 Show Leaderboard
               </button>
             </div>
