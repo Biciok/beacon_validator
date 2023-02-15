@@ -47,7 +47,6 @@ export default function Home() {
   };
 
   const sumValidatorBalances = (validators) => {
-    console.log("xxx");
     const validatorBalance = validators.reduce((acc, validator) => {
       return acc + parseInt(validator.balance);
     }, 0);
@@ -162,7 +161,7 @@ export default function Home() {
               <button type="submit" onClick={calculateData} className="btn btn-secondary mx-2">
                 Calculate validator data
               </button>
-              <button type="submit" onClick={calculateLeaderboard} className="btn btn-outline mx-2">
+              <button type="submit" onClick={calculateLeaderboard} className="btn btn-accent mx-2">
                 Show Leaderboard
               </button>
             </div>
@@ -206,7 +205,7 @@ export default function Home() {
           <>
             <h2 className="text-3xl font-bold">Totals by status</h2>
 
-            <div className="stats bg-accent text-primary-content m-2">
+            <div className="stats bg-secondary text-primary-content m-2">
               <div className="stat">
                 <div className="stat-title">
                   Sum of all <strong>pending_initialized</strong> validators
@@ -217,7 +216,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="stats bg-accent text-primary-content m-2">
+            <div className="stats bg-secondary text-primary-content m-2">
               <div className="stat">
                 <div className="stat-title">
                   Sum of all <strong>pending_queued</strong> validators
@@ -228,7 +227,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="stats bg-accent text-primary-content m-2">
+            <div className="stats bg-secondary text-primary-content m-2">
               <div className="stat">
                 <div className="stat-title">
                   Sum of all <strong>active_ongoing</strong> validators
@@ -239,7 +238,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="stats bg-accent text-primary-content m-2">
+            <div className="stats bg-secondary text-primary-content m-2">
               <div className="stat">
                 <div className="stat-title">
                   Sum of all <strong>active_exiting</strong> validators
@@ -250,7 +249,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="stats bg-accent text-primary-content m-2">
+            <div className="stats bg-secondary text-primary-content m-2">
               <div className="stat">
                 <div className="stat-title">
                   Sum of all <strong>active_slashed</strong> validators
@@ -261,7 +260,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="stats bg-accent text-primary-content m-2">
+            <div className="stats bg-secondary text-primary-content m-2">
               <div className="stat">
                 <div className="stat-title">
                   Sum of all <strong>exited_unslashed</strong> validators
@@ -272,7 +271,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="stats bg-accent text-primary-content m-2">
+            <div className="stats bg-secondary text-primary-content m-2">
               <div className="stat">
                 <div className="stat-title">
                   Sum of all <strong>exited_slashed</strong> validators
@@ -283,7 +282,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="stats bg-accent text-primary-content m-2">
+            <div className="stats bg-secondary text-primary-content m-2">
               <div className="stat">
                 <div className="stat-title">
                   Sum of all <strong>withdrawal_possible</strong> validators
@@ -294,7 +293,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="stats bg-accent text-primary-content m-2">
+            <div className="stats bg-secondary text-primary-content m-2">
               <div className="stat">
                 <div className="stat-title">
                   Sum of all <strong>withdrawal_done</strong> validators
@@ -315,10 +314,10 @@ export default function Home() {
               <table className="table table-compact w-full">
                 <thead>
                   <tr>
-                    <th>Rank</th>
-                    <th>Index</th>
-                    <th>Balance</th>
-                    <th>Public key</th>
+                    <th className="bg-accent text-primary-content">Rank</th>
+                    <th className="bg-accent text-primary-content">Index</th>
+                    <th className="bg-accent text-primary-content">Balance</th>
+                    <th className="bg-accent text-primary-content">Public key</th>
                   </tr>
                 </thead>
                 <tbody>
