@@ -154,14 +154,14 @@ export default function Home() {
           <div className="hero-content text-center">
             <div className="max-w-3xl">
               <h1 className="text-5xl font-bold text-primary-content">Ethereum 2 Validators</h1>
-              <p className="py-6 text-primary-content">ETHDenver</p>
-              <button type="submit" onClick={fetchData} className="btn btn-primary mx-2">
+              <p className="py-6 text-primary-content">❤️ ETHDenver</p>
+              <button type="submit" onClick={fetchData} className="btn btn-primary m-2">
                 Fetch validator data
               </button>
               <button
                 type="submit"
                 onClick={calculateData}
-                className="btn btn-secondary mx-2"
+                className="btn btn-secondary m-2"
                 disabled={validators.length > 0 ? false : true}
               >
                 Calculate validator data
@@ -169,7 +169,7 @@ export default function Home() {
               <button
                 type="submit"
                 onClick={calculateLeaderboard}
-                className="btn btn-accent mx-2"
+                className="btn btn-accent m-2"
                 disabled={validators.length > 0 ? false : true}
               >
                 Show Leaderboard
