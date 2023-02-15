@@ -203,7 +203,7 @@ export default function Home() {
 
         {validatorBalance > 0 && (
           <>
-            <h2 className="text-3xl font-bold">Totals by status</h2>
+            <h2 className="text-4xl text-primary-content font-bold pt-5 pb-3">Totals by status</h2>
 
             <div className="stats bg-secondary text-primary-content m-2">
               <div className="stat">
@@ -308,7 +308,7 @@ export default function Home() {
 
         {leaderboard.length > 0 && (
           <>
-            <h2 className="text-3xl font-bold py-3">Leaderboard</h2>
+            <h2 className="text-4xl text-primary-content font-bold pt-5 pb-3">Leaderboard</h2>
 
             <div className="overflow-x-auto">
               <table className="table table-compact w-full">
