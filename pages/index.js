@@ -369,9 +369,8 @@ export default function Home() {
       <footer className="footer footer-center p-4 bg-base-300 text-base-content">
         <div>
           <p>
-            Powered by{" "}
             <a href="https://www.quicknode.com" target="_blank" rel="noreferrer" className="text-primary-content">
-              QuickNode
+              <img src="powered-by-quicknode-blue.png" alt="QuickNode" width="150" />
             </a>
           </p>
         </div>
