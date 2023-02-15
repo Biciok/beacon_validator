@@ -9,8 +9,8 @@ import { useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [validators, setValidators] = useState([]);
   const [totalBalance, setTotalBalance] = useState(0);
+  const [validators, setValidators] = useState([]);
   const [validatorBalance, setValidatorBalance] = useState(0);
   const [leaderboard, setLeaderboard] = useState([]);
 
@@ -155,13 +155,13 @@ export default function Home() {
             <div className="max-w-3xl">
               <h1 className="text-5xl font-bold text-primary-content">Ethereum 2 Validators</h1>
               <p className="py-6 text-primary-content">❤️ ETHDenver</p>
-              <button type="submit" onClick={fetchData} className="btn btn-primary m-2">
+              <button type="submit" onClick={fetchData} className="btn btn-primary m-2 normal-case">
                 Fetch validator data
               </button>
               <button
                 type="submit"
                 onClick={calculateData}
-                className="btn btn-secondary m-2"
+                className="btn btn-secondary m-2 normal-case"
                 disabled={validators.length > 0 ? false : true}
               >
                 Calculate validator data
@@ -169,7 +169,7 @@ export default function Home() {
               <button
                 type="submit"
                 onClick={calculateLeaderboard}
-                className="btn btn-accent m-2"
+                className="btn btn-accent m-2 normal-case"
                 disabled={validators.length > 0 ? false : true}
               >
                 Show Leaderboard
