@@ -162,7 +162,7 @@ export default function Home() {
               <button type="submit" onClick={calculateData} className="btn btn-secondary mx-2">
                 Calculate validator data
               </button>
-              <button type="submit" onClick={calculateLeaderboard} className="btn btn-accent mx-2">
+              <button type="submit" onClick={calculateLeaderboard} className="btn btn-outline mx-2">
                 Show Leaderboard
               </button>
             </div>
