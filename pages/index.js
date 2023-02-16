@@ -373,6 +373,17 @@ export default function Home() {
               <img src="powered-by-quicknode-blue.png" alt="QuickNode" width="150" />
             </a>
           </p>
+          <p className="mt-3">
+            Code repository:{" "}
+            <a
+              href="https://github.com/velvet-shark/beacon-validators"
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary-content inline"
+            >
+              https://github.com/velvet-shark/beacon-validators
+            </a>
+          </p>
         </div>
       </footer>
     </>
