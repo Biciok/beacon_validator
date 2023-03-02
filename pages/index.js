@@ -183,7 +183,7 @@ export default function Home() {
             <div className="stat">
               <div className="stat-title">Total Beacon Contract balance</div>
               <div className="stat-value">
-                {(parseInt(totalBalance) / 1e18).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                {(parseInt(totalBalance) / 1e18).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
               </div>
             </div>
           </div>
@@ -205,7 +205,7 @@ export default function Home() {
             <div className="stat">
               <div className="stat-title">Sum of all validator balances</div>
               <div className="stat-value">
-                {(validatorBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                {(validatorBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
               </div>
             </div>
           </div>
@@ -221,7 +221,7 @@ export default function Home() {
                   Sum of all <strong>pending_initialized</strong> validators
                 </div>
                 <div className="stat-value">
-                  {(pendingInitializedBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                  {(pendingInitializedBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
                 </div>
               </div>
             </div>
@@ -232,7 +232,7 @@ export default function Home() {
                   Sum of all <strong>pending_queued</strong> validators
                 </div>
                 <div className="stat-value">
-                  {(pendingQueuedBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                  {(pendingQueuedBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
                 </div>
               </div>
             </div>
@@ -243,7 +243,7 @@ export default function Home() {
                   Sum of all <strong>active_ongoing</strong> validators
                 </div>
                 <div className="stat-value">
-                  {(activeOngoingBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                  {(activeOngoingBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
                 </div>
               </div>
             </div>
@@ -254,7 +254,7 @@ export default function Home() {
                   Sum of all <strong>active_exiting</strong> validators
                 </div>
                 <div className="stat-value">
-                  {(activeExitingBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                  {(activeExitingBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
                 </div>
               </div>
             </div>
@@ -265,7 +265,7 @@ export default function Home() {
                   Sum of all <strong>active_slashed</strong> validators
                 </div>
                 <div className="stat-value">
-                  {(activeSlashedBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                  {(activeSlashedBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
                 </div>
               </div>
             </div>
@@ -276,7 +276,7 @@ export default function Home() {
                   Sum of all <strong>exited_unslashed</strong> validators
                 </div>
                 <div className="stat-value">
-                  {(exitedUnslashedBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                  {(exitedUnslashedBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
                 </div>
               </div>
             </div>
@@ -287,7 +287,7 @@ export default function Home() {
                   Sum of all <strong>exited_slashed</strong> validators
                 </div>
                 <div className="stat-value">
-                  {(exitedSlashedBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                  {(exitedSlashedBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
                 </div>
               </div>
             </div>
@@ -298,7 +298,7 @@ export default function Home() {
                   Sum of all <strong>withdrawal_possible</strong> validators
                 </div>
                 <div className="stat-value">
-                  {(withdrawalPossibleBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                  {(withdrawalPossibleBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
                 </div>
               </div>
             </div>
@@ -309,7 +309,7 @@ export default function Home() {
                   Sum of all <strong>withdrawal_done</strong> validators
                 </div>
                 <div className="stat-value">
-                  {(withdrawalDoneBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 4 })} ETH
+                  {(withdrawalDoneBalance / 1e9).toLocaleString(undefined, { minimumFractionDigits: 0 })} ETH
                 </div>
               </div>
             </div>
@@ -384,6 +384,26 @@ export default function Home() {
               https://github.com/velvet-shark/beacon-validators
             </a>
           </p>
+          <div>
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <div className="card-body">
+                <h2 className="card-title">Code</h2>
+                <p>Full code is on GitHub.</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">Grab it</button>
+                </div>
+              </div>
+            </div>
+            <div className="card w-96 bg-base-100 shadow-xl">
+              <div className="card-body">
+                <h2 className="card-title">Video</h2>
+                <p>Want to see it built live? Have a look at this YouTube video.</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-primary">Watch it</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </>
