@@ -34,6 +34,7 @@ export default function Home() {
   // Fetch validator data from REST API
   const fetchValidators = async () => {
     try {
+      console.log("Fetching validators...");
       const validators = await fetch(
         `${process.env.NEXT_PUBLIC_QUICKNODE_RPC}eth/v1/beacon/states/head/validators`
       ).then((res) => res.json());
@@ -126,8 +127,6 @@ export default function Home() {
   // Handle data fetching
   const fetchData = (e) => {
     fetchBeaconContractBalance();
-    fetchValidators();
-    console.log(validators);
   };
 
   const calculateData = (e) => {
@@ -156,6 +155,9 @@ export default function Home() {
               <h1 className="text-5xl font-bold text-primary-content">Ethereum 2 Validators</h1>
               <p className="py-6 text-primary-content">❤️ ETHDenver</p>
               <button type="submit" onClick={fetchData} className="btn btn-primary m-2 normal-case">
+                Fetch staked balance
+              </button>
+              <button type="submit" onClick={fetchValidators} className="btn btn-primary m-2 normal-case">
                 Fetch validator data
               </button>
               <button
@@ -374,21 +376,39 @@ export default function Home() {
             </a>
           </p>
           <div>
-            <div className="card inline-block m-5 w-69 bg-primary text-primary-content">
+            <div className="card inline-block my-2 mx-4 w-69 bg-primary text-primary-content">
               <div className="card-body">
                 <h2 className="card-title">Code</h2>
                 <p>Full code of the website.</p>
                 <div className="card-actions justify-end">
-                  <button className="btn normal-case">Grab it on GitHub</button>
+                  <button className="btn normal-case">
+                    <a
+                      href="https://github.com/velvet-shark/beacon-validators"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-primary-content inline"
+                    >
+                      Grab it on GitHub
+                    </a>
+                  </button>
                 </div>
               </div>
             </div>
-            <div className="card inline-block m-5 w-69 bg-primary text-primary-content">
+            <div className="card inline-block m-2 w-69 bg-primary text-primary-content">
               <div className="card-body">
                 <h2 className="card-title">Video</h2>
                 <p>Want to see it built live?</p>
                 <div className="card-actions justify-end">
-                  <button className="btn normal-case">Watch it on YouTube</button>
+                  <button className="btn normal-case">
+                    <a
+                      href="https://youtu.be/DpQqXv8Tq5A"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-primary-content inline"
+                    >
+                      Watch it on YouTube
+                    </a>
+                  </button>
                 </div>
               </div>
             </div>
