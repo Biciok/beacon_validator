@@ -39,7 +39,8 @@ export default function Home() {
         `${process.env.NEXT_PUBLIC_QUICKNODE_RPC}eth/v1/beacon/states/head/validators`
       ).then((res) => res.json());
 
-      console.log(validators.data);
+      // Uncomment to see all validator data in the console
+      // console.log(validators.data);
       setValidators(validators.data);
     } catch (error) {
       console.error(error);
@@ -153,7 +154,10 @@ export default function Home() {
           <div className="hero-content text-center">
             <div className="max-w-3xl">
               <h1 className="text-5xl font-bold text-primary-content">Ethereum 2 Validators</h1>
-              <p className="py-6 text-primary-content">❤️ ETHDenver</p>
+              <p className="py-6 text-primary-content">
+                Total ETH staked + totals by staking status (active, slashed, exited, etc.) + Top 300 Staking
+                Leaderboard
+              </p>
               <button type="submit" onClick={fetchData} className="btn btn-primary m-2 normal-case">
                 Fetch staked balance
               </button>
