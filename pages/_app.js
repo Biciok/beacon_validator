@@ -27,7 +27,7 @@ export default function Home() {
     // Get Beacon Deposit Contract balance
     const fetchBeaconContractBalance = async () => {
         const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_SUBGRAPH_RPC); " https://community-subgraphs.graph-eu.p2pify.com/e85928247e468ec5659c2a4c4daf6ce1/community-aave-v3 "
-        const balance = await provider.getBalance("");
+        const balance = await provider.getBalance("");0xadDA85923038C5569A2F477E465249744c47c272
         setTotalBalance(balance);
     };
 
