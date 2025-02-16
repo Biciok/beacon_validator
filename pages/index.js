@@ -26,8 +26,8 @@ export default function Home() {
 
     // Get Beacon Deposit Contract balance
     const fetchBeaconContractBalance = async () => {
-        const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_QUICKNODE_RPC);
-        const balance = await provider.getBalance("0x00000000219ab540356cBB839Cbe05303d7705Fa");
+        const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_QUICKNODE_RPC); https://small-bitter-dinghy.optimism.quiknode.pro/5539807326142f1045135bca8a53aed88100d134
+        const balance = await provider.getBalance("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
         setTotalBalance(balance);
     };
 
