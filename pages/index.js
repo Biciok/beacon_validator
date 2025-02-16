@@ -26,8 +26,8 @@ export default function Home() {
 
     // Get Beacon Deposit Contract balance
     const fetchBeaconContractBalance = async () => {
-        const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_QUICKNODE_RPC); https://small-bitter-dinghy.optimism.quiknode.pro/5539807326142f1045135bca8a53aed88100d134
-        const balance = await provider.getBalance("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
+        const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_QUICKNODE_RPC);https://api.quicknode.com/functions/rest/v1/functions/aa20fd51-36ec-40e4-bc55-52310cd11262/call
+        const balance = await provider.getBalance("0x00000000219ab540356cBB839Cbe05303d7705Fa");
         setTotalBalance(balance);
     };
 
@@ -36,7 +36,7 @@ export default function Home() {
         try {
             console.log("Fetching validators...");
             const validators = await fetch(
-                `${process.env.NEXT_PUBLIC_QUICKNODE_RPC}eth/v1/beacon/states/head/validators`
+                `${process.env.NEXT_PUBLIC_QUICKNODE_RPC}eth/v1/functions/aa20fd51-36ec-40e4-bc55-52310cd11262/call
             ).then((res) => res.json());
 
             // Uncomment to see all validator data in the console
