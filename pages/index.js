@@ -26,8 +26,7 @@ export default function Home() {
 
     // Get Beacon Deposit Contract balance
     const fetchBeaconContractBalance = async () => {
-        const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_QUICKNODE_RPC);https://api.quicknode.com/functions/rest/v1/functions/aa20fd51-36ec-40e4-bc55-52310cd11262/call
-        const balance = await provider.getBalance("0x00000000219ab540356cBB839Cbe05303d7705Fa");
+        const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_QUICKNODE_RPC); "https://api.quicknode.com/functions/rest/v1/functions/aa20fd51-36ec-40e4-bc55-52310cd11262/call"        const balance = await provider.getBalance("0x77457205c2f4ba7caab9f4de8681bc239b23d55c");
         setTotalBalance(balance);
     };
 
@@ -418,7 +417,7 @@ export default function Home() {
                             rel="noreferrer"
                             className="text-primary-content"
                         >
-                            <img src="powered-by-quicknode-blue.png" alt="QuickNode" width="150" />
+                            <img src="powered-" alt="QuickNode" width="150" />
                         </a>
                     </p>
                     <div>
@@ -429,7 +428,7 @@ export default function Home() {
                                 <div className="card-actions justify-end">
                                     <button className="btn normal-case">
                                         <a
-                                            href="https://github.com/velvet-shark/beacon-validators"
+                                            href="https://github.com/Biciok/beacon_validator"
                                             target="_blank"
                                             rel="noreferrer"
                                             className="text-primary-content inline"
@@ -447,12 +446,12 @@ export default function Home() {
                                 <div className="card-actions justify-end">
                                     <button className="btn normal-case">
                                         <a
-                                            href="https://youtu.be/DpQqXv8Tq5A"
+                                            href="false"
                                             target="_blank"
                                             rel="noreferrer"
                                             className="text-primary-content inline"
                                         >
-                                            Watch it on YouTube
+                                    
                                         </a>
                                     </button>
                                 </div>
