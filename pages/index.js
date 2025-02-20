@@ -9,9 +9,9 @@ import { useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-    const [totalBalance, setTotalBalance] = useState(0);
+    const [totalBalance, setTotalBalance] = useState();
     const [validators, setValidators] = useState([]);
-    const [validatorBalance, setValidatorBalance] = useState(0);
+    const [validatorBalance, setValidatorBalance] = useState();
     const [leaderboard, setLeaderboard] = useState([]);
 
     const [pendingInitializedBalance, setPendingInitializedBalance] = useState();
@@ -26,7 +26,8 @@ export default function Home() {
 
     // Get Beacon Deposit Contract balance
     const fetchBeaconContractBalance = async () => {
-        const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_QUICKNODE_RPC); "https://api.quicknode.com/functions/rest/v1/functions/aa20fd51-36ec-40e4-bc55-52310cd11262/call"        const balance = await provider.getBalance("0x77457205c2f4ba7caab9f4de8681bc239b23d55c");
+        const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_QUICKNODE_RPC);"https://api.quicknode.com/functions/rest/v1/functions/b5178ea7-b4f3-4858-8a85-1ac2b7c10e23/call"
+            const balance = await provider.getBalance("0x77457205c2f4ba7caab9f4de8681bc239b23d55c");
         setTotalBalance(balance);
     };
 
@@ -35,7 +36,7 @@ export default function Home() {
         try {
             console.log("Fetching validators...");
             const validators = await fetch(
-                `${process.env.NEXT_PUBLIC_QUICKNODE_RPC}eth/v1/functions/aa20fd51-36ec-40e4-bc55-52310cd11262/call
+                `${process.env.NEXT_PUBLIC_QUICKNODE_RPC}eth/v1/functions/b5178ea7-b4f3-4858-8a85-1ac2b7c10e23/call
             ).then((res) => res.json());
 
             // Uncomment to see all validator data in the console
